@@ -9,8 +9,8 @@ const SpotifyWebApi = require('spotify-web-api-node');
 
 // credentials are optional
 const spotifyApi = new SpotifyWebApi({
-  clientId: '98871feea8a64254a453504cf91a8ca5',
-  clientSecret: '62561c469e9243deb494665a3bdcd5f9',
+  clientId: process.env.SPOTIFY_CLIENT_ID,
+  clientSecret: process.env.SPOTIFY_CLIENT_SECRET,
 });
 
 app.get('/api/artist-top-tracks', (req, res) => {
